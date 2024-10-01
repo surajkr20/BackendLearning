@@ -6,6 +6,11 @@ const express = require('express');
 const app = express();
 const port = 3000;  
 
+// used to parse req.body in express -> PUT or POST
+const bodyParser = require('body-parser')
+// specifically parse JSON data & add it to the request
+app.use(bodyParser.json());
+
 // creating multiple routes with multiple http request
 
 // 1. get request
